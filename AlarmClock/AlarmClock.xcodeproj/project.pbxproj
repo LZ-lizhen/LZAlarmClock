@@ -45,6 +45,7 @@
 		B7225B531E644C8400949BAE /* 9.m4r in Resources */ = {isa = PBXBuildFile; fileRef = B7225B461E644C8400949BAE /* 9.m4r */; };
 		B7225B561E644F3B00949BAE /* SoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7225B551E644F3B00949BAE /* SoundTableViewController.m */; };
 		B7225B581E64550900949BAE /* 2.m4r in Resources */ = {isa = PBXBuildFile; fileRef = B7225B571E64550900949BAE /* 2.m4r */; };
+		B72AB01F1E6ECD570071F6BC /* 八音盒.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B72AB01E1E6ECD570071F6BC /* 八音盒.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		B7225B541E644F3B00949BAE /* SoundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTableViewController.h; sourceTree = "<group>"; };
 		B7225B551E644F3B00949BAE /* SoundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundTableViewController.m; sourceTree = "<group>"; };
 		B7225B571E64550900949BAE /* 2.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.m4r; sourceTree = "<group>"; };
+		B72AB01E1E6ECD570071F6BC /* 八音盒.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "八音盒.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		B7225AA91E6429E300949BAE = {
 			isa = PBXGroup;
 			children = (
+				B72AB01E1E6ECD570071F6BC /* 八音盒.mp3 */,
 				B7225B391E644C8400949BAE /* sound */,
 				B7225B351E643B3900949BAE /* NSDate+LZ.h */,
 				B7225B361E643B3900949BAE /* NSDate+LZ.m */,
@@ -410,6 +413,7 @@
 				B7225B491E644C8400949BAE /* 11.m4r in Resources */,
 				B7225B471E644C8400949BAE /* 1.m4r in Resources */,
 				B7225AC01E6429E300949BAE /* Main.storyboard in Resources */,
+				B72AB01F1E6ECD570071F6BC /* 八音盒.mp3 in Resources */,
 				B7225B521E644C8400949BAE /* 8.m4r in Resources */,
 				B7225B4F1E644C8400949BAE /* 5.m4r in Resources */,
 			);
@@ -686,6 +690,7 @@
 				B7225AE41E6429E300949BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7225AE51E6429E300949BAE /* Build configuration list for PBXNativeTarget "AlarmClockTests" */ = {
 			isa = XCConfigurationList;
@@ -694,6 +699,7 @@
 				B7225AE71E6429E300949BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7225AE81E6429E300949BAE /* Build configuration list for PBXNativeTarget "AlarmClockUITests" */ = {
 			isa = XCConfigurationList;
@@ -702,6 +708,7 @@
 				B7225AEA1E6429E300949BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

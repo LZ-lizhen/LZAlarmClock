@@ -62,7 +62,6 @@
     
     myTableViewCell *cell = [myTableViewCell cellWithTableView:tableView];    
     cell.textLabel.text = [NSDate timeWithTimestamp:timeStr withTimeFormart:@"HH:mm"];
-
     return cell;
 }
 
@@ -84,7 +83,6 @@
 
 -(void)localNotificationForIOS1OWithTimeStr:(NSString *)timeStr WithIndexSound:(NSInteger )index
 {
-    
     // 申请通知权限
     [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
         

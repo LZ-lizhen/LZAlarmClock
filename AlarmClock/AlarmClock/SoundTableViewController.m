@@ -8,7 +8,12 @@
 
 #import "SoundTableViewController.h"
 
-@interface SoundTableViewController ()
+#import <AVFoundation/AVFoundation.h>
+
+@interface SoundTableViewController ()<AVAudioPlayerDelegate>
+{
+    AVAudioPlayer *avAudioPlayer;   //播放器player
+}
 @property (nonatomic, strong) NSMutableArray *soundArray;
 
 @end
@@ -21,8 +26,6 @@
 }
 
 #pragma mark - Table view data source
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.soundArray.count;
@@ -47,14 +50,43 @@
     {
         self.soundOption(self.soundArray[indexPath.row],indexPath.row);
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    //播放音乐
+    [self sharePlayerWithSoundName:[NSString stringWithFormat:@"%ld",indexPath.row+1]];
+    
+//    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+//初始化播放器
+-(void)sharePlayerWithSoundName:(NSString *)soundName
+{
+    //从budle路径下读取音频文件　　这个文件名是你的歌曲名字,mp3是你的音频格式
+    NSString *string = [[NSBundle mainBundle] pathForResource:soundName ofType:@"m4r"];
+    //把音频文件转换成url格式
+    NSURL *url = [NSURL fileURLWithPath:string];
+    //初始化音频类 并且添加播放文件
+    avAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    //设置代理
+    avAudioPlayer.delegate = self;
+    
+    //设置初始音量大小
+    // avAudioPlayer.volume = 1;
+    
+    //设置音乐播放次数  -1为一直循环
+    avAudioPlayer.numberOfLoops = 0;
+    
+    //预播放
+    [avAudioPlayer prepareToPlay];
+    
+    [avAudioPlayer play];
 }
 
 #pragma mark 懒加载
 -(NSMutableArray *)soundArray
 {
-    if (!_soundArray) {
-        
+    if (!_soundArray)
+    {
         _soundArray = [NSMutableArray arrayWithObjects:@"八音盒",
                        @"村庄的早晨",
                        @"滴答滴答",
