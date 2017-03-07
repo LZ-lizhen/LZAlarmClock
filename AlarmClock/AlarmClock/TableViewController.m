@@ -103,6 +103,7 @@
             
             content.categoryIdentifier = @"categoryIdentifier";
             
+            
             // 2、创建通知触发
             NSDateComponents* date = [[NSDateComponents alloc] init];
 //            date.year = [[NSDate timeWithTimestamp:timeStr withTimeFormart:@"YYYY"] integerValue];
