@@ -93,8 +93,7 @@
             
             // 内容
             content.body = @"主人起床了";
-            
-            
+
             // 通知的提示声音，这里用的默认的声音
             NSString *soundName = [NSString stringWithFormat:@"%ld.m4r",index];
             content.sound =[UNNotificationSound soundNamed:soundName];
